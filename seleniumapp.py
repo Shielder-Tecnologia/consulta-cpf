@@ -6,7 +6,7 @@ from selenium.webdriver import Firefox
 
 #### SETUP #####
 opt = Options()
-#opt.add_argument("--headless")
+opt.add_argument("--headless")
 browser = Firefox(options=opt)
 browser.get("https://www.situacao-cadastral.com/")
 
