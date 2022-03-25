@@ -22,6 +22,7 @@ if fd.validators.is_valid_cpf(cpf):
     try:
         result = browser.find_element(By.ID,"resultado")
         result.screenshot(path + '/result.png')
+        print('\n' + result.text)
     except Exception as erro:
         print(erro)
     finally:
