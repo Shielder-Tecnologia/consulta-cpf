@@ -24,7 +24,7 @@ if fd.validators.is_valid_cpf(cpf):
         result.screenshot(path + '/result.png')
         print('\n' + result.text)
     except Exception as erro:
-        print(erro)
+        print("CPF ainda não cadastrado ou erro na consulta")
     finally:
         browser.quit()
 
