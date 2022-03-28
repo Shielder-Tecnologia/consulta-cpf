@@ -1,7 +1,5 @@
-from wsgiref.simple_server import software_version
 import fordev as fd
 import os
-from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver import Firefox
