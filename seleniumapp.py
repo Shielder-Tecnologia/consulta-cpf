@@ -21,7 +21,8 @@ if fd.validators.is_valid_cpf(cpf):
     browser.find_element(By.ID,"consultar").click()
     try:
         result = browser.find_element(By.ID,"resultado")
-        result.screenshot(path + '/result.png')
+        # Caso queira uma screenshot do resultado da página descomentar
+        #result.screenshot(path + '/result.png')
         print('\n' + result.text)
     except Exception as erro:
         print("CPF ainda não cadastrado ou erro na consulta")
