@@ -1,3 +1,2 @@
-fordev==1.0.3
 random_user_agent==1.0.1
 selenium==4.1.3
