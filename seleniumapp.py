@@ -20,8 +20,12 @@ def main(argv):
     opt.add_argument("--headless")
     opt.add_argument(f'user-agent={usuario}')
     browser = Firefox(options=opt)
-
-    cpf = argv[0]
+    try:
+        cpf = argv[0]
+    except:
+        print("Usage:\n\t./consulta-cpf {cpf}\n\tpython3 seleniumapp.py {cpf}")
+        return
+    
     #print("Insira o cpf a ser procurado: ")
     #cpf = input()
 
@@ -37,7 +41,7 @@ def main(argv):
         #result.screenshot(path + '/result.png')
         print('\n' + result.text)
     except TimeoutException:
-        print("deu timeout")
+        print("deu timeout cloudflare me bloqueou")
     except Exception as erro:
         print(erro)
     finally:
